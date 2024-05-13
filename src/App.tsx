@@ -25,7 +25,7 @@ function App() {
 
   return (
     <Authenticator>
-      {({ signOut, user }) => (
+      {({ signOut }) => (
         <main>
           <h1>My todos</h1>
           <button onClick={createTodo}>+ new</button>
@@ -37,12 +37,12 @@ function App() {
               {todo.content}
             </li>)}
           </ul>
+          <button onClick={signOut}>Sign out</button>
           <div>
             🥳 App successfully hosted. Try creating a new todo.
             <br />
             <a href="https://docs.amplify.aws/react/start/quickstart/">Review next step of this tutorial.</a>
           </div>
-          <button onClick={signOut}>Sign out</button>
         </main>
       )}
     </Authenticator>
